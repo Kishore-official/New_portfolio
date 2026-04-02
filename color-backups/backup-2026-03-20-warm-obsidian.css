@@ -1,0 +1,18 @@
+/* Color System Backup — 2026-03-20 (Warm Obsidian Gold) */
+/* Palette before Midnight Ink update */
+
+:root {
+  --bg:            #0a090c;
+  --surface:       #12111a;
+  --card:          #1a1922;
+  --border:        #252430;
+  --accent:        #c8a45e;
+  --accent-dim:    #9a7d3e;
+  --text-1:        #e8e6e3;
+  --text-2:        #7e7d8e;
+  --text-3:        #3e3d48;
+  --accent-glow:   rgba(200, 164, 94, 0.08);
+  --accent-border: rgba(200, 164, 94, 0.15);
+  --shadow-color:  rgba(0, 0, 0, 0.35);
+  --hover-lift:    #1e1d26;
+}

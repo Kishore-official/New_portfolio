@@ -1,0 +1,18 @@
+/* Color System Backup — 2026-03-20 (Midnight Ink) */
+/* Palette before Winterfell winter theme */
+
+:root {
+  --bg:            #060810;
+  --surface:       #0c1120;
+  --card:          #131a2c;
+  --border:        #1e2740;
+  --accent:        #c8a45e;
+  --accent-dim:    #8b7240;
+  --text-1:        #e4e6eb;
+  --text-2:        #7b83a2;
+  --text-3:        #363f55;
+  --accent-glow:   rgba(200, 164, 94, 0.08);
+  --accent-border: rgba(200, 164, 94, 0.15);
+  --shadow-color:  rgba(6, 8, 16, 0.45);
+  --hover-lift:    #1a2338;
+}

@@ -1,0 +1,14 @@
+/* Color System Backup — 2026-03-20 */
+/* Original palette before color-system update */
+
+:root {
+  --bg:          #08080a;
+  --surface:     #111115;
+  --card:        #16161b;
+  --border:      #222228;
+  --accent:      #c8a45e;
+  --accent-dim:  #8b7240;
+  --text-1:      #eeeef2;
+  --text-2:      #86869a;
+  --text-3:      #44444e;
+}

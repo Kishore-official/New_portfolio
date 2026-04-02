@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/bizzz/.claude/**)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.items\\(\\) if ''''skill'''' in k.lower\\(\\) or ''''plugin'''' in k.lower\\(\\)}, indent=2\\)\\)\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(k\\) for k in d.keys\\(\\)]\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)\\)\")",
+      "Bash(npm install:*)",
+      "Bash(ls d:/protfolio/*.html d:/protfolio/*.json)",
+      "Bash(npx next:*)",
+      "Bash(npx serve:*)",
+      "Bash(npm run:*)",
+      "Bash(mkdir -p \"D:/protfolio/portfolio/public/projects\")",
+      "Bash(cp \"D:/protfolio/projects/ecommerce/WhatsApp Image 2026-03-06 at 10.39.54 AM.jpeg\" \"D:/protfolio/portfolio/public/projects/ecommerce-1.jpg\")",
+      "Bash(cp \"D:/protfolio/projects/ecommerce/WhatsApp Image 2026-03-06 at 10.42.54 AM.jpeg\" \"D:/protfolio/portfolio/public/projects/ecommerce-2.jpg\")",
+      "Bash(cp \"D:/protfolio/projects/Saloon/WhatsApp Image 2026-02-18 at 4.09.51 PM.jpeg\" \"D:/protfolio/portfolio/public/projects/saloon-1.jpg\")",
+      "Bash(cp \"D:/protfolio/projects/Saloon/WhatsApp Image 2026-02-18 at 4.09.51 PM \\(1\\).jpeg\" \"D:/protfolio/portfolio/public/projects/saloon-2.jpg\")",
+      "Bash(wc:*)",
+      "Bash(npx tsc:*)",
+      "WebSearch",
+      "Bash(find D:protfolio.claudeskills -type f -name *.md)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__navigate_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_screenshot",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_pages",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__evaluate_script",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__emulate",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_console_messages",
+      "Bash(disown)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__new_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__resize_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_snapshot",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__click"
+    ],
+    "additionalDirectories": [
+      "d:\\protfolio\\.claude\\skills"
+    ]
+  }
+}

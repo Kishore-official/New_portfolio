@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kishore V — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --text: #1a1a1a;
+      --text-2: #4a4a4a;
+      --text-3: #6b6b6b;
+      --accent: #1a6fb5;
+      --border: #d4d4d4;
+      --bg: #ffffff;
+      --bg-subtle: #f7f8fa;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 10px;
+      line-height: 1.5;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 24px 36px 18px;
+    }
+
+    @media print {
+      .page {
+        padding: 24px 32px 20px;
+      }
+    }
+
+    /* ── Header ── */
+    .header { margin-bottom: 14px; }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 9.5px;
+      color: var(--text-2);
+    }
+
+    .contact-row a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-row span::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      background: var(--border);
+      border-radius: 50%;
+      margin-right: 0;
+      vertical-align: middle;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .contact-item .label {
+      font-weight: 600;
+      color: var(--text-3);
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Experience ── */
+    .exp-item {
+      margin-bottom: 8px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .exp-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .exp-company {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .exp-date {
+      font-size: 9.5px;
+      font-weight: 500;
+      color: var(--text-3);
+      white-space: nowrap;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 9.5px;
+      color: var(--text-2);
+      margin-bottom: 2px;
+      line-height: 1.55;
+    }
+
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 8px;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+    }
+
+    .skill-row {
+      display: flex;
+      gap: 6px;
+      font-size: 9.5px;
+      line-height: 1.7;
+    }
+
+    .skill-label {
+      font-weight: 600;
+      color: var(--text);
+      min-width: 95px;
+      white-space: nowrap;
+    }
+
+    .skill-value {
+      color: var(--text-2);
+    }
+
+    /* ── Projects ── */
+    .project-item {
+      margin-bottom: 7px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+
+    .project-name {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .project-tag {
+      font-size: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      background: rgba(26, 111, 181, 0.08);
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .project-stack {
+      font-size: 8.5px;
+      color: var(--text-3);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .project-desc {
+      font-size: 9.5px;
+      color: var(--text-2);
+      line-height: 1.5;
+    }
+
+    .project-link {
+      font-size: 8.5px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Certifications ── */
+    .cert-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cert-list li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 9.5px;
+      color: var(--text-2);
+      margin-bottom: 2px;
+      line-height: 1.55;
+    }
+
+    .cert-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 8px;
+    }
+
+    .cert-org {
+      color: var(--text-3);
+      font-style: italic;
+    }
+
+    /* ── Education ── */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-degree {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .edu-year {
+      font-size: 9.5px;
+      color: var(--text-3);
+      font-weight: 500;
+    }
+
+    .edu-school {
+      font-size: 9.5px;
+      color: var(--text-2);
+    }
+
+    /* ── Activities ── */
+    .activity-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .activity-list li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 9.5px;
+      color: var(--text-2);
+      margin-bottom: 2px;
+      line-height: 1.55;
+    }
+
+    .activity-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 8px;
+    }
+
+    /* Print optimization */
+    @media print {
+      body { font-size: 9.5px; }
+      .page { padding: 18px 28px 14px; min-height: auto; }
+      .section { margin-bottom: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ═══ HEADER ═══ -->
+    <div class="header">
+      <h1>KISHORE V</h1>
+      <div class="contact-row">
+        <span class="contact-item"><span class="label">Email:</span> arunkishore757@gmail.com</span>
+        <span class="contact-item"><span class="label">Mobile:</span> +91 9688404148</span>
+        <span class="contact-item"><span class="label">Location:</span> Chennai</span>
+        <span class="contact-item"><span class="label">LinkedIn:</span> <a href="https://www.linkedin.com/in/kishore-v2">linkedin.com/in/kishore-v2</a></span>
+        <span class="contact-item"><span class="label">GitHub:</span> <a href="https://github.com/Kishore-official">github.com/Kishore-official</a></span>
+      </div>
+    </div>
+
+    <!-- ═══ PROFESSIONAL SUMMARY ═══ -->
+    <div class="section">
+      <div class="section-title">Professional Summary</div>
+      <div style="font-size: 9.5px; color: var(--text-2); line-height: 1.65;">
+        AI Engineer with hands-on experience in Python, prompt engineering, and AI-augmented development. Strong ability to plan, architect, and ship production-grade web applications rapidly using AI tools like Claude Code and Cursor. Skilled in building custom AI agents, automation workflows, and full-stack applications — turning ideas into deployed products in significantly less time than traditional development.
+      </div>
+    </div>
+
+    <!-- ═══ WORK EXPERIENCE ═══ -->
+    <div class="section">
+      <div class="section-title">Work Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">AI Engineer — <span class="exp-company">Bizzzup</span></div>
+          <div class="exp-date">Jul 2025 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Plan, architect, and ship production-grade web applications in rapid timelines using Claude Code, Cursor, and structured prompt engineering</li>
+          <li>Build custom Claude Code skills and AI agents to automate repetitive development tasks and standardize project workflows</li>
+          <li>Develop full-stack applications (Next.js, TypeScript, Tailwind CSS, Three.js, Framer Motion) and deploy on Google Cloud Run</li>
+          <li>Manage end-to-end project delivery — from requirement analysis to deployment — using AI-augmented development workflows</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">Machine Learning Intern — <span class="exp-company">Bizzzup</span></div>
+          <div class="exp-date">Jan 2025 – Jul 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built intelligent AI agents and multi-agent systems using CrewAI and LangChain for automated business workflows</li>
+          <li>Designed end-to-end automation flows using N8N and Zapier, integrating REST APIs and third-party services</li>
+          <li>Performed Exploratory Data Analysis (EDA) on datasets and developed AI-powered tools leveraging LLMs, RAG pipelines, and prompt engineering</li>
+          <li>Applied Claude Code and MCP (Model Context Protocol) tooling to streamline development workflows and accelerate project delivery</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══ TECHNICAL SKILLS ═══ -->
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">Proficient</span>
+          <span class="skill-value"><strong>Python</strong>, JavaScript, HTML, CSS, Django, Flask, MySQL, Git</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">AI-Augmented</span>
+          <span class="skill-value">React, Next.js, TypeScript, NestJS, Tailwind CSS, PostgreSQL, MongoDB, Framer Motion, Three.js</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">AI / ML</span>
+          <span class="skill-value">LangChain, CrewAI, RAG, Google ADK, LLMs, EDA</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">AI Dev Tools</span>
+          <span class="skill-value">Claude Code (skills, agents), Cursor, GitHub Copilot, Prompt Engineering</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Automation</span>
+          <span class="skill-value">N8N, Zapier, MCP, REST APIs</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">DevOps / Tools</span>
+          <span class="skill-value">Docker, Git, GitHub, Google Cloud Run</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ PROJECTS ═══ -->
+    <div class="section">
+      <div class="section-title">Projects</div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">MERIDIAN — E-Commerce Platform</span>
+          <span class="project-tag">Full Stack</span>
+        </div>
+        <div class="project-stack">NestJS · Next.js · PostgreSQL · Redis · Docker · TypeORM</div>
+        <div class="project-desc">
+          Enterprise-grade global marketplace with 4 frontend apps, 111+ API endpoints, JWT auth with 7 RBAC roles, BullMQ job queues, and multi-country support. ~509 tests with full HTTP flow coverage.
+        </div>
+        <a class="project-link" href="https://ecommerce-api-895210689446.europe-west2.run.app">▸ ecommerce-api-895210689446.europe-west2.run.app</a>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Salon Management System</span>
+          <span class="project-tag">Full Stack</span>
+        </div>
+        <div class="project-stack">React · Flask · MongoDB · Google Cloud · Ant Design · Python</div>
+        <div class="project-desc">
+          Multi-branch salon platform managing 7 locations, 600+ customers, and 1,000+ bills with POS billing, real-time inventory tracking, role-based access control, and analytics dashboard.
+        </div>
+        <a class="project-link" href="https://saloon-management-system-895210689446.europe-west2.run.app">▸ saloon-management-system-895210689446.europe-west2.run.app</a>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Bizzzup — Company Portfolio Website</span>
+          <span class="project-tag">Full Stack</span>
+        </div>
+        <div class="project-stack">Next.js · TypeScript · CSS · Google Cloud Run</div>
+        <div class="project-desc">
+          High-performance company website with project showcase, built-in AI chatbot, SEO optimization (95+ score), and conversion-driven sections. Deployed on Google Cloud Run.
+        </div>
+        <a class="project-link" href="https://bizzzup-site-895210689446.asia-south1.run.app/">▸ bizzzup-site-895210689446.asia-south1.run.app</a>
+      </div>
+
+    </div>
+
+    <!-- ═══ CERTIFICATIONS ═══ -->
+    <div class="section">
+      <div class="section-title">Certifications</div>
+      <ul class="cert-list">
+        <li>Claude Code in Action <span class="cert-org">— Anthropic Education</span></li>
+        <li>AI Impact Summit Buildathon <span class="cert-org">— GUVI</span></li>
+        <li>Python Full Stack Developer Training <span class="cert-org">— Login360 Technologies, Chennai</span></li>
+        <li>HCIA-Cloud Computing V4.0 <span class="cert-org">— PSNACET</span></li>
+        <li>Tech Test'20 Coding Contest <span class="cert-org">— PSNACET</span></li>
+      </ul>
+    </div>
+
+    <!-- ═══ EDUCATION ═══ -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-row">
+        <span class="edu-degree">B.E. Computer Science</span>
+        <span class="edu-year">2024</span>
+      </div>
+      <div class="edu-school">PSNA College of Engineering and Technology, Dindigul, Tamil Nadu</div>
+    </div>
+
+    <!-- ═══ EXTRA-CURRICULAR ═══ -->
+    <div class="section">
+      <div class="section-title">Extra-Curricular Activities</div>
+      <ul class="activity-list">
+        <li>State-level and division cricket player; captain of SDAT cricket team</li>
+        <li>Student leader managing a team of 10 volunteers for event management</li>
+        <li>Executive member of I-MATH Club and Rotary Club</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
